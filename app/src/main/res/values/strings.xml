@@ -3,4 +3,26 @@
     <string name="single_signal">Один звуковой сигнал</string>
     <string name="Settings">Настройки</string>
     <string name="add_new_alarm">Добавить будильник</string>
+    <string name="single_signal_chip">Один звуковой сигнал</string>
+    <string name="personal_chip">Персональн.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="days_of_week_full">
+        <item>Понедельник</item>
+        <item>Вторник</item>
+        <item>Среда</item>
+        <item>Четверг</item>
+        <item>Пятница</item>
+        <item>Суббота</item>
+        <item>Воскресенье</item>
+    </string-array>
+    <string-array name="days_of_week_short">
+        <item>Пн</item>
+        <item>Вт</item>
+        <item>Ср</item>
+        <item>Чт</item>
+        <item>Пт</item>
+        <item>Сб</item>
+        <item>Вск</item>
+    </string-array>
 </resources>

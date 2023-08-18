@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.AlarmItemActivity"
+    android:background="@color/black">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/alarm_activity_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" >
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="16dp"
+            android:src="@drawable/ic_back"/>
+        <ImageButton
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_marginHorizontal="16dp"
+            android:src="@drawable/ic_check"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <TimePicker
+        android:id="@+id/timepicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="false"
+        android:headerTimeTextAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:timePickerMode="clock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/alarm_activity_toolbar" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="199dp" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/single_signal_chip_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/single_signal_chip"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timepicker" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/personal_signal_chip_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/personal_chip"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/timepicker" />
+
+    <EditText
+        android:id="@+id/et_alarm_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/personal_signal_chip_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
