@@ -5,9 +5,9 @@ import androidx.lifecycle.ViewModelProvider
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
-import ru.nfm.talkingalarm.presentation.AlarmItemViewModel
-import ru.nfm.talkingalarm.presentation.AlarmListViewModel
 import ru.nfm.talkingalarm.presentation.ViewModelFactory
+import ru.nfm.talkingalarm.presentation.alarmitem.AlarmItemViewModel
+import ru.nfm.talkingalarm.presentation.alarmlist.AlarmListViewModel
 
 @Module
 interface ViewModelModule {

@@ -1,7 +1,7 @@
 package ru.nfm.talkingalarm.data.mapper
 
 import ru.nfm.talkingalarm.data.database.model.AlarmDbModel
-import ru.nfm.talkingalarm.domain.Alarm
+import ru.nfm.talkingalarm.domain.model.Alarm
 import javax.inject.Inject
 
 class AlarmMapper @Inject constructor() {
@@ -49,8 +49,4 @@ class AlarmMapper @Inject constructor() {
     fun mapListDbModelToDomainList(list: List<AlarmDbModel>): List<Alarm> = list.map {
         mapDbModelToDomain(it)
     }
-
-
-
-
 }

@@ -1,9 +1,11 @@
-package ru.nfm.talkingalarm.presentation
+package ru.nfm.talkingalarm.presentation.alarmlist
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
-import ru.nfm.talkingalarm.domain.Alarm
+import ru.nfm.talkingalarm.domain.model.Alarm
 import ru.nfm.talkingalarm.domain.DeleteAlarmUseCase
 import ru.nfm.talkingalarm.domain.EditAlarmUseCase
 import ru.nfm.talkingalarm.domain.GetAlarmListUseCase
@@ -14,6 +16,10 @@ class AlarmListViewModel @Inject constructor(
     private val deleteAlarmUseCase: DeleteAlarmUseCase,
     private val editAlarmUseCase: EditAlarmUseCase
 ): ViewModel() {
+
+    private val _alarmLiveData = MutableLiveData<Alarm>()
+    val alarmLiveData: LiveData<Alarm>
+        get() = _alarmLiveData
 
     val alarmList = getAlarmListUseCase()
 

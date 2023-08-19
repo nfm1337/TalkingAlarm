@@ -1,11 +1,12 @@
 package ru.nfm.talkingalarm.data.database.repository
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.map
 import ru.nfm.talkingalarm.data.database.dao.AlarmDao
 import ru.nfm.talkingalarm.data.mapper.AlarmMapper
-import ru.nfm.talkingalarm.domain.Alarm
-import ru.nfm.talkingalarm.domain.AlarmRepository
+import ru.nfm.talkingalarm.domain.model.Alarm
+import ru.nfm.talkingalarm.domain.repository.AlarmRepository
 import javax.inject.Inject
 
 class AlarmRepositoryImpl @Inject constructor(
@@ -26,6 +27,7 @@ class AlarmRepositoryImpl @Inject constructor(
     }
 
     override suspend fun createAlarm(alarm: Alarm) {
+        Log.d("AlarmRepositoryImpl", "Created alarm")
         alarmDao.insertOrUpdateAlarm(mapper.mapDomainToDbModel(alarm))
     }
 

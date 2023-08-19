@@ -5,11 +5,13 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import ru.nfm.talkingalarm.data.database.dao.AlarmDao
+import ru.nfm.talkingalarm.data.database.dao.SentenceDao
 import ru.nfm.talkingalarm.data.database.model.AlarmDbModel
+import ru.nfm.talkingalarm.data.database.model.SentenceDbModel
 import ru.nfm.talkingalarm.di.ApplicationScope
 
 @ApplicationScope
-@Database(entities = [AlarmDbModel::class], version = 2, exportSchema = false)
+@Database(entities = [AlarmDbModel::class, SentenceDbModel::class], version = 4, exportSchema = false)
 abstract class AlarmDatabase : RoomDatabase() {
 
     companion object {
@@ -36,4 +38,5 @@ abstract class AlarmDatabase : RoomDatabase() {
     }
 
     abstract fun alarmDao(): AlarmDao
+    abstract fun sentenceDao(): SentenceDao
 }

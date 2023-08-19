@@ -5,13 +5,11 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import androidx.room.Transaction
 import ru.nfm.talkingalarm.data.database.model.AlarmDbModel
 
 @Dao
 interface AlarmDao {
 
-    @Transaction
     @Query("SELECT * FROM alarms")
     fun getAlarmList(): LiveData<List<AlarmDbModel>>
 

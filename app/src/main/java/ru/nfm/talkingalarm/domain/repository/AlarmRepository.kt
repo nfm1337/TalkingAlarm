@@ -1,6 +1,7 @@
-package ru.nfm.talkingalarm.domain
+package ru.nfm.talkingalarm.domain.repository
 
 import androidx.lifecycle.LiveData
+import ru.nfm.talkingalarm.domain.model.Alarm
 
 interface AlarmRepository {
 

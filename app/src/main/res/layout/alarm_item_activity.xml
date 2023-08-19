@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.AlarmItemActivity"
+    tools:context=".presentation.alarmitem.AlarmItemActivity"
     android:background="@color/black">
 
     <androidx.appcompat.widget.Toolbar
@@ -34,7 +34,11 @@
         android:layout_height="wrap_content"
         android:focusableInTouchMode="false"
         android:headerTimeTextAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:timePickerMode="clock"
+        android:timePickerMode="spinner"
+        android:numbersTextColor="@color/white"
+        android:numbersBackgroundColor="@color/white"
+        android:numbersInnerTextColor="@color/white"
+        android:numbersSelectorColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/alarm_activity_toolbar" />

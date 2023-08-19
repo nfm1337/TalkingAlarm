@@ -4,8 +4,8 @@ import android.app.Application
 import dagger.BindsInstance
 import dagger.Component
 import ru.nfm.talkingalarm.AlarmApp
-import ru.nfm.talkingalarm.presentation.AlarmItemActivity
-import ru.nfm.talkingalarm.presentation.AlarmListActivity
+import ru.nfm.talkingalarm.presentation.alarmitem.AlarmItemActivity
+import ru.nfm.talkingalarm.presentation.alarmlist.AlarmListActivity
 
 @ApplicationScope
 @Component(
@@ -22,6 +22,7 @@ interface ApplicationComponent {
     fun inject(activity: AlarmItemActivity)
 
     fun inject(application: AlarmApp)
+
 
     @Component.Factory
     interface Factory {

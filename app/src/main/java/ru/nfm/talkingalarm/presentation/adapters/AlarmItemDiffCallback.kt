@@ -1,7 +1,7 @@
 package ru.nfm.talkingalarm.presentation.adapters
 
 import androidx.recyclerview.widget.DiffUtil
-import ru.nfm.talkingalarm.domain.Alarm
+import ru.nfm.talkingalarm.domain.model.Alarm
 
 object AlarmItemDiffCallback : DiffUtil.ItemCallback<Alarm>() {
 
